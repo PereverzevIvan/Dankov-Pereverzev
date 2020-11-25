@@ -24,8 +24,8 @@ class Form(QWidget, Ui_Form):
 
     def draw_flag(self, qp):
         x, y = randint(50, self.w - 50), randint(50, self.h - 50)
-        while (x in range(self.btn_draw.x(), self.btn_draw.x() + self.btn_draw.width())) or\
-            (y in range(self.btn_draw.y(), self.btn_draw.y() + self.btn_draw.width())):
+        while (x in range(self.btn_draw.x(), self.btn_draw.x() + self.btn_draw.width())) or \
+                (y in range(self.btn_draw.y(), self.btn_draw.y() + self.btn_draw.width())):
             x, y = randint(50, self.w - 50), randint(50, self.h - 50)
         radius = randint(15, 100)
         color = [randint(0, 255) for i in range(3)]
@@ -35,7 +35,6 @@ class Form(QWidget, Ui_Form):
     def paint(self):
         self.do_paint = True
         self.repaint()
-
 
 
 if __name__ == '__main__':
