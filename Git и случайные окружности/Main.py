@@ -29,7 +29,7 @@ class Form(QWidget, Ui_Form):
             x, y = randint(50, self.w - 50), randint(50, self.h - 50)
         radius = randint(15, 100)
         color = [randint(0, 255) for i in range(3)]
-        qp.setBrush(QColor(*color))
+        qp.setPen(QColor(*color))
         qp.drawEllipse(x, y, radius, radius)
 
     def paint(self):
